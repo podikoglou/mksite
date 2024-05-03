@@ -25,7 +25,18 @@ title: 'mksite'
 # `mksite`
 A tiny and portable static site generator
 
-$ cat index.md | mksite
+$ cat template.html
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>
+
+$ cat index.md | mksite --template template.html
 <!doctype html>
 <html lang="en">
   <head>

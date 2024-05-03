@@ -19,7 +19,7 @@ copy-assets:
 
 $(OUT_DIR)/%.html: $(PAGES_DIR)/%.md
 	@mkdir -p $(dir $@)
-	mksite < $< > $@
+	mksite --template templates/page.html < $< > $@
 
 clean:
 	rm -rfv $(OUT_DIR)

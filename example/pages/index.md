@@ -1,5 +1,4 @@
 ---
-template: page
 title: 'My little blog:))'
 ---
 

@@ -1,5 +1,4 @@
 ---
-template: page
 title: 'Some Post - My blog'
 ---
 

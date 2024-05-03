@@ -4,6 +4,8 @@ project(mksite)
 # cmake properties
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "")
 set(CMAKE_CXX_STANDARD 17)
+set(ENABLE_TESTING OFF)
+set(BUILD_TESTING OFF)
 
 # add libraries
 add_subdirectory(thirdparty/cmark)

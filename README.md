@@ -13,7 +13,7 @@ make](https://www.gnu.org/software/make/manual/make.html) or
 running `mksite`. You can even use plain shell scripts.
 
 ## Usage Example
-```
+```console
 $ cat index.md
 ---
 title: 'mksite'

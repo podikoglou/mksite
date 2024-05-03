@@ -52,11 +52,17 @@ $ cat index.md | mksite --template template.html
 # Getting
 
 ## Binaries
-Binaries are published on
+Statically linked Binaries are published on
 [GitHub](https://github.com/podikoglou/mksite/releases)
 
 ## Building from Source
-`mksite` is written in C++ and uses [xmake](https://xmake.io) as its build
-system.
-
-Don't like xmake? -- Just [get the binary](https://github.com/podikoglou/mksite/releases).
+`mksite` is written in C++17 and uses CMake as its build system. Here's a quick guide to helping you compile `mksite` from source:
+```
+git clone --recursive git@github.com:podikoglou/mksite.git
+cd mksite
+mkdir build
+cd build
+cmake ..
+make -j $(nproc)
+```
+Your binary is at `./mksite`

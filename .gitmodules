@@ -1,0 +1,6 @@
+[submodule "thirdparty/cmark"]
+	path = thirdparty/cmark
+	url = https://github.com/commonmark/cmark/
+[submodule "thirdparty/inja"]
+	path = thirdparty/inja
+	url = https://github.com/pantor/inja

@@ -1,0 +1,30 @@
+:root {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #f2f2f2;
+
+  padding: 10px;
+}
+
+header a {
+  color: #333;
+  text-decoration: none;
+
+  margin-right: 10px;
+}
+
+main {
+  margin-top: 20px;
+}
+
+footer {
+  background-color: #f2f2f2;
+
+  margin-top: auto;
+}

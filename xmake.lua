@@ -13,7 +13,3 @@ add_includedirs("include/")
 add_packages("cmark")
 
 target_end()
-
---    -- add link libraries and search directories
---    add_links("tbox")
---    add_linkdirs("/usr/local/lib", "/usr/lib")

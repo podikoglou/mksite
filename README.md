@@ -42,9 +42,7 @@ Binaries are published on
 [GitHub](https://github.com/podikoglou/mksite/releases)
 
 ## Building from Source
-mksite is written in C++ and uses [xmake](https://xmake.io) as its build
+`mksite` is written in C++ and uses [xmake](https://xmake.io) as its build
 system.
 
-Thankfully, xmake has the ability to generate the appropriate CMakeLists.txt,
-which I commit to the repository, so you don't need to have xmake on your
-system to build mksite.
+Don't like xmake? -- Just [get the binary](https://github.com/podikoglou/mksite/releases).

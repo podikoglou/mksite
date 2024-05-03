@@ -14,6 +14,7 @@ add_executable(${PROJECT_NAME}
   src/main.cpp
   src/page.cpp
   src/rendering.cpp
+  src/frontmatter.cpp
   src/yaml.cpp
 )
 

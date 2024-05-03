@@ -1,2 +1,0 @@
-# aijosdfgjaiod
-<photos></photos>

@@ -3,10 +3,6 @@
 
 #pragma once
 
-struct PageData {
-  std::string title;
-};
-
 class Page {
 public:
   Page(std::string, inja::Template templ);
@@ -17,5 +13,5 @@ private:
   std::string m_input;
   inja::Template m_template;
 
-  PageData m_pageData;
+  inja::json m_pageData;
 };

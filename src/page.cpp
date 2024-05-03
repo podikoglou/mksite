@@ -1,14 +1,13 @@
 #include "page.hpp"
+#include "frontmatter.hpp"
+#include "inja/inja.hpp"
 #include "rendering.hpp"
 #include <string>
 
 Page::Page(std::string input, inja::Template templ) {
-  this->m_input = input;
+  this->m_input = strip_frontmatter(input);
   this->m_template = templ;
-  this->m_pageData = PageData();
-
-  // parse pagedata from the frontmatter on the input + remove the frontmatter
-  // from the input
+  this->m_pageData = parse_frontmatter(input);
 }
 
 std::string Page::render() {

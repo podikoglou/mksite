@@ -15,11 +15,10 @@ std::string render_markdown(std::string input) {
 }
 
 std::string render_template(std::string input, inja::Template templ,
-                            PageData data) {
-  inja::json json_data;
+                            inja::json data) {
 
-  json_data["title"] = data.title;
-  json_data["content"] = input;
+  // add the content and potentially other global variables
+  data["content"] = input;
 
-  return inja::render(templ.content, json_data);
+  return inja::render(templ.content, data);
 }

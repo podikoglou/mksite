@@ -7,11 +7,11 @@
 #include <tuple>
 
 std::tuple<size_t, size_t> find_frontmatter(std::string input) {
-  size_t first = input.find_first_of("---");
+  size_t first = input.find("---");
 
   std::string rest = input.substr(first + 3, input.length());
 
-  size_t last = rest.find_first_of("---") + 3;
+  size_t last = rest.find("---") + 3;
 
   return std::make_tuple(first, last);
 }

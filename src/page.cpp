@@ -1,19 +1,21 @@
 #include "page.hpp"
-#include "cmark.h"
+#include "rendering.hpp"
 #include <string>
 
-Page::Page(std::string input) { this->m_input = input; }
+Page::Page(std::string input, inja::Template templ) {
+  this->m_input = input;
+  this->m_template = templ;
+  this->m_pageData = PageData();
+
+  // parse pagedata from the frontmatter on the input + remove the frontmatter
+  // from the input
+}
 
 std::string Page::render() {
-  // render markdown into html using cmark
-  char *rendered_c = cmark_markdown_to_html(
-      this->m_input.c_str(), this->m_input.length(), CMARK_OPT_DEFAULT);
+  std::string output;
 
-  // convert the result into a c++ string and free the raw c string
-  std::string rendered(rendered_c);
-  free(rendered_c);
+  output = render_markdown(this->m_input);
+  output = render_template(output, this->m_template, this->m_pageData);
 
-  // TODO: pass through template engine
-
-  return rendered;
+  return output;
 }

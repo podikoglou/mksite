@@ -8,7 +8,10 @@
 
 std::tuple<size_t, size_t> find_frontmatter(std::string input) {
   size_t first = input.find_first_of("---");
-  size_t last = input.find_last_of("---");
+
+  std::string rest = input.substr(first + 3, input.length());
+
+  size_t last = rest.find_first_of("---") + 3;
 
   return std::make_tuple(first, last);
 }
@@ -31,9 +34,7 @@ nlohmann::json parse_frontmatter(std::string input) {
   std::tuple<size_t, size_t> fm = find_frontmatter(input);
 
   size_t start = std::get<0>(fm) + 3;
-  size_t end = std::get<1>(fm) - 5;
-  //                            ^^^
-  // POTENTIAL BUG: I have **NO** idea why I have to do - 5 here and not - 3
+  size_t end = std::get<1>(fm) - 3;
 
   std::string raw_yaml = input.substr(start, end);
 

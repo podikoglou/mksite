@@ -4,3 +4,6 @@
 [submodule "thirdparty/inja"]
 	path = thirdparty/inja
 	url = https://github.com/pantor/inja
+[submodule "thirdparty/rapidyaml"]
+	path = thirdparty/rapidyaml
+	url = https://github.com/biojppm/rapidyaml

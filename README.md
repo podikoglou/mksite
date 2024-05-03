@@ -30,9 +30,7 @@ $ cat index.md | mksite
   </head>
   <body>
     <h1><pre>mksite</pre></h1>
-    <p>
-      <A tiny and portable static site generator
-    </p>
+    <p>A tiny and portable static site generator</p>
   </body>
 </html>
 ```

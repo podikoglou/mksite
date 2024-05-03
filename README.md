@@ -1,5 +1,5 @@
 # mksite
-A tiny and portable static site generator
+A tiny and portable static site generator.
 
 ## Philosophy
 `mksite` follows Unix principles:
@@ -11,6 +11,9 @@ website. More commonly, a tool like [GNU
 make](https://www.gnu.org/software/make/manual/make.html) or
 [mk](https://doc.cat-v.org/plan_9/4th_edition/papers/mk) is responsible for
 running `mksite`. You can even use plain shell scripts.
+
+`mksite` draws inspiration from [saait](https://git.codemadness.org/saait/),
+with the main difference being that `mksite` is less opinionated
 
 ## Usage Example
 ```console
